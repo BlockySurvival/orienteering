@@ -1,7 +1,7 @@
 local S = minetest.get_translator("orienteering")
 local mod_map = minetest.get_modpath("map") -- map mod from Minetest Game
 
-local orienteering = {}
+orienteering = {}
 orienteering.playerhuds = {}
 orienteering.settings = {}
 orienteering.settings.speed_unit = S("m/s")
@@ -28,6 +28,9 @@ elseif set == "right" then
 end
 
 local o_lines = 4 -- Number of lines in HUD
+
+minetest.register_privilege("minimap", "Allows a player to the minimap")
+minetest.register_privilege("radar", "Allows a player to the radar minimap")
 
 -- Helper function to switch between 12h and 24 mode for the time
 function orienteering.toggle_time_mode(itemstack, user, pointed_thing)
@@ -243,13 +246,25 @@ if minetest.get_modpath("default") ~= nil then
 end
 
 function orienteering.update_automapper(player)
+    local player_name = player:get_player_name()
+	local flags = {
+		minimap = false,
+		minimap_radar = false
+	}
+
+    if minetest.check_player_privs(player_name, {minimap=true}) then
+        flags.minimap = true
+    end
+	if minetest.check_player_privs(player_name, {radar=true}) then
+        flags.minimap_radar = true
+    end
 	if orienteering.tool_active(player, "orienteering:automapper") or orienteering.tool_active(player, "orienteering:quadcorder") or minetest.settings:get_bool("creative_mode") then
-		player:hud_set_flags({minimap = true, minimap_radar = true})
+		flags.minimap = true
+		flags.minimap_radar = true
 	elseif ((not mod_map) and orienteering.tool_active(player, "orienteering:map")) or ((mod_map) and orienteering.tool_active(player, "map:mapping_kit")) then
-		player:hud_set_flags({minimap = true, minimap_radar = false})
-	else
-		player:hud_set_flags({minimap = false, minimap_radar = false})
+		flags.minimap = true
 	end
+	player:hud_set_flags(flags)
 end
 
 -- Checks whether a certain orienteering tool is “active” and ready for use
