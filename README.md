@@ -1,4 +1,7 @@
 # Orienteering
+
+[![](https://github.com/BlockySurvival/orienteering/workflows/Check%20&%20Release/badge.svg)](https://github.com/BlockySurvival/orienteering/actions)
+
 FORKED FROM: https://repo.or.cz/minetest_orienteering.git
 
 This mod adds several tools which mostly aid in orientation. When carrying them,
