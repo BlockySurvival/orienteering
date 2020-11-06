@@ -33,6 +33,17 @@ Coordinates: X@=@1, Z@=@2=Koordinaten: X@=@1, Z@=@2
 Master of Orienteering=Meister der Orientierung
 Craft a quadcorder.=Fertigen Sie einen Vierkorder.
 
+Shows your horizontal coordinates=Zeigt Ihre horizontalen Koordinaten
+Shows your yaw=Zeigt Ihren Gierwinkel
+Shows your pitch=Zeigt Ihren Nickwinkel
+Shows your coordinates, yaw, pitch, time, speed and enables minimap=Zeigt Koordinaten, Blickwinkel, Zeit, Tempo und aktiviert Übersichtskarte
+Shows the time=Zeigt die Zeit
+Shows your speed=Zeigt Ihre Geschwindigkeit
+Allows using the minimap=Erlaubt Benuzung der Übersichtskarte
+Allows using the minimap and radar=Erlaubt Benutzung der Übersichtskarte und des Radars
+Shows your coordinates, yaw and the time=Zeigt Ihre Koordinaten, Gierwinkel und die Zeit
+Shows your elevation=Zeigt Ihre Höhe
+
 It shows you your yaw (horizontal viewing angle) in degrees.=Er zeigt Ihnen Ihre Gierung (horizontaler Blickwinkel) in Grad.
 It shows you your pitch (vertical viewing angle) in degrees.=Er zeigt Ihnen Ihren Nick (vertikaler Blickwinkel) in Grad.
 It shows you your current elevation (Y).=Er zeigt Ihnen Ihre momentane Höhe (Y).

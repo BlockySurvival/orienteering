@@ -45,6 +45,18 @@ Speed: hor.: @1 @2, vert.: @3 @4=
 Master of Orienteering=
 Craft a quadcorder.=
 
+# Tooltips / short helptexts
+Shows your horizontal coordinates=
+Shows your yaw=
+Shows your pitch=
+Shows your coordinates, yaw, pitch, time, speed and enables minimap=
+Shows the time=
+Shows your speed=
+Allows using the minimap=
+Allows using the minimap and radar=
+Shows your coordinates, yaw and the time=
+Shows your elevation=
+
 # Help texts
 It shows you your yaw (horizontal viewing angle) in degrees.=
 It shows you your pitch (vertical viewing angle) in degrees.=
