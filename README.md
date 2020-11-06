@@ -8,7 +8,7 @@ This mod adds several tools which mostly aid in orientation. When carrying them,
 this will enhance the HUD by adding several interesting information such as the
 coordinates or the viewing angles or enabling the use of the minimap.
 
-Current version: 1.5
+Current version: 1.6
 
 ## Mod support
 All dependencies are optional.
@@ -20,8 +20,8 @@ There is an optional dependency on Achievements [`awards`] by rubenwardy. If
 both this mod and the default mod are enabled, the achievement “Master of
 Orienteering” will be added.
 
-This mod includes item help texts for `doc_items` of the Documentation System
-modpack.
+This mod includes item help texts for `tt` (Extended Tooltips mod)
+and `doc_items` of the Documentation System modpack.
 
 ## Tools
 The orienteering tools are used automatically. To use them, you only need to
