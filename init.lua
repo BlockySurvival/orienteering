@@ -220,7 +220,7 @@ if minetest.get_modpath("default") ~= nil then
 		recipe = {
 			{ "default:gold_ingot", "orienteering:triangulator", "default:gold_ingot" },
 			{ "orienteering:compass", "default:bronze_ingot", "orienteering:watch" },
-                        { "default:tin_ingot", "orienteering:altimeter", "default:tin_ingot" }
+						{ "default:tin_ingot", "orienteering:altimeter", "default:tin_ingot" }
 		}
 	})
 	minetest.register_craft({
@@ -228,7 +228,7 @@ if minetest.get_modpath("default") ~= nil then
 		recipe = {
 			{ "default:gold_ingot", "default:gold_ingot", "default:gold_ingot" },
 			{ "orienteering:speedometer", "default:diamond", "orienteering:automapper", },
-                        { "orienteering:sextant", "default:diamond", "orienteering:gps" }
+						{ "orienteering:sextant", "default:diamond", "orienteering:gps" }
 		}
 	})
 	minetest.register_craft({
@@ -254,18 +254,18 @@ if minetest.get_modpath("default") ~= nil then
 end
 
 function orienteering.update_automapper(player)
-    local player_name = player:get_player_name()
+	local player_name = player:get_player_name()
 	local flags = {
 		minimap = false,
 		minimap_radar = false
 	}
 
-    if minetest.check_player_privs(player_name, {minimap=true}) then
-        flags.minimap = true
-    end
+	if minetest.check_player_privs(player_name, {minimap=true}) then
+		flags.minimap = true
+	end
 	if minetest.check_player_privs(player_name, {radar=true}) then
-        flags.minimap_radar = true
-    end
+		flags.minimap_radar = true
+	end
 	if orienteering.tool_active(player, "orienteering:automapper") or orienteering.tool_active(player, "orienteering:quadcorder") or minetest.is_creative_enabled(player:get_player_name()) then
 		flags.minimap = true
 		flags.minimap_radar = true
