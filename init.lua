@@ -414,17 +414,19 @@ function orienteering.update_hud_displays(player)
 	else
 		str_speed = ""
 	end
-
-	local strs = { str_pos, str_angles, str_time, str_speed }
-	local line = 1
-	for i=1, o_lines do
-		if strs[i] ~= "" then
-			player:hud_change(orienteering.playerhuds[name]["o_line"..line], "text", strs[i])
-			line = line + 1
+	local playerhud = orienteering.playerhuds[name]
+	if playerhud then
+		local strs = { str_pos, str_angles, str_time, str_speed }
+		local line = 1
+		for i=1, o_lines do
+			if strs[i] ~= "" then
+				player:hud_change(playerhud["o_line"..line], "text", strs[i])
+				line = line + 1
+			end
 		end
-	end
-	for l=line, o_lines do
-		player:hud_change(orienteering.playerhuds[name]["o_line"..l], "text", "")
+		for l=line, o_lines do
+			player:hud_change(playerhud["o_line"..l], "text", "")
+		end
 	end
 end
 
